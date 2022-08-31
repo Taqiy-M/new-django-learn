@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitob Tahrirlash</title>
+</head>
+<body>
+<form method="post" action="/update-book/{{book.id}}/">{% csrf_token %}
+    <p><input type="text" value="{{book.nom}}" name="nom" placeholder="Kitob nomi"></p>
+    <p><input type="number" value="{{book.sahifa}}" name="sahifa" placeholder="Sahifa soni"></p>
+    <p><input type="number" value="{{book.yil}}" name="yil" placeholder="Yozilgan yil"></p>
+    <p><input type="text" value="{{book.janr}}" name="janr" placeholder="Janr"></p>
+    <select name="muallif">
+        {% for i in authors %}
+        <option value="{{i.id}}">{{i.ism}}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Qo'shish</button>
+</form>
+</body>
+</html>

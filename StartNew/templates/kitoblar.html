@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitoblar</title>
+</head>
+<body>
+
+{% for i in books %}
+<h1>{{i.nom}}</h1>
+<span>sahifalar soni: {{i.sahifa}}</span>
+<span>yil: {{i.yil}}</span>
+<span>janr: {{i.janr}}</span>
+<span>{{i.yozuvchi}}</span>
+<a href="/delete-book/{{i.id}}/"><button>o'chirish</button></a>
+<a href="/update-book/{{i.id}}/"><button>edit</button></a>
+<hr>
+{% endfor %}
+
+<form method="post" action="/all-books/">{% csrf_token %}
+    <p><input type="text" name="nom" placeholder="Kitob nomi"></p>
+    <p><input type="number" name="sahifa" placeholder="Sahifa soni"></p>
+    <p><input type="number" name="yil" placeholder="Yozilgan yil"></p>
+    <p><input type="text" name="janr" placeholder="Janr"></p>
+    <select name="muallif">
+        {% for i in authors %}
+        <option value="{{i.id}}">{{i.ism}}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Qo'shish</button>
+</form>
+</body>
+</html>

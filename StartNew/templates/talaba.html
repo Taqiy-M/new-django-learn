@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talaba</title>
+</head>
+<body>
+
+{% for i in students %}
+<h1>{{i.id}} {{i.ism}} {{i.kitoblar_soni}}</h1>
+{% endfor %}
+
+<form method="post" action="/all-students/">{% csrf_token %}
+    <input type="text" name="name" placeholder="Falon Pistonov">
+    <input type="text" name="st_raqam" placeholder="talaba raqami">
+    <input type="text" name="kitoblar_soni" placeholder="Kitoblar soni">
+    <button type="submit">Qo'shish</button>
+
+</form>
+</body>
+</html>
+

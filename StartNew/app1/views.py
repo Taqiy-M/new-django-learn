@@ -74,3 +74,7 @@ def book_update(request, a):
         'book': Kitob.objects.get(id=a)
     }
     return render(request, 'book_update.html', data)
+
+
+def hello_world(request):
+    print("Hello world!!")

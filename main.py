@@ -74,7 +74,14 @@ for i in range(1, a+1):
 
 
 
+def hello_django():
+    print("Hey! Whatsup bro!!!")
 
+def hello_django1():
+    print("Hey! Whatsup bro!!!")
+
+def hello_django2():
+    print("Hey! Whatsup bro!!!")
 
 
 

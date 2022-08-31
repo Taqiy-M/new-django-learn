@@ -78,3 +78,6 @@ def book_update(request, a):
 
 def hello_world(request):
     print("Hello world!!")
+
+def hello_clone(hello):
+    print("HELLOOOOO CLLLLLOOOOOOOOOOOOOOOOOOOOOOOOOONE")

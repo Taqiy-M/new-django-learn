@@ -76,11 +76,7 @@ def book_update(request, a):
     return render(request, 'book_update.html', data)
 
 
-def heeeey(n):
-    s = 0
-    for i in range(n):
-        s += i
-    return n
+
 
 
 

@@ -76,8 +76,28 @@ def book_update(request, a):
     return render(request, 'book_update.html', data)
 
 
-def hello_world(request):
-    print("Hello world!!")
+def heeeey(n):
+    s = 0
+    for i in range(n):
+        s += i
+    return n
 
-def hello_clone(hello):
-    print("HELLOOOOO CLLLLLOOOOOOOOOOOOOOOOOOOOOOOOOONE")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
